@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexaFlow - Panel de Control</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="margin: 0; padding: 0; background-color: #F8FAFC; font-family: 'Inter', sans-serif; display: flex; min-height: 100vh;">
+
+    <aside style="width: 260px; background-color: #1A1A2E; color: #FFFFFF; display: flex; flex-direction: column; position: fixed; top: 0; bottom: 0; left: 0; padding: 24px; box-sizing: border-box; z-index: 100;">
+        <div style="font-size: 1.5rem; font-weight: 700; color: #FFFFFF; margin-bottom: 40px; letter-spacing: 0.5px;">NexaFlow</div>
+        
+        <nav style="display: flex; flex-direction: column; gap: 8px; flex: 1;">
+            <a href="#" style="color: #FFFFFF; background-color: #E94560; padding: 12px 16px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.95rem; display: block;">📊 Dashboard</a>
+            <a href="producto.html" style="color: #94A3B8; padding: 12px 16px; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.95rem; display: block; transition: color 0.2s;">🔄 Mis Flujos</a>
+            <a href="#" style="color: #94A3B8; padding: 12px 16px; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.95rem; display: block; transition: color 0.2s;">🔌 Integraciones</a>
+            <a href="precios.html" style="color: #94A3B8; padding: 12px 16px; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.95rem; display: block; transition: color 0.2s;">💳 Facturación</a>
+            <a href="blog.html" style="color: #94A3B8; padding: 12px 16px; border-radius: 6px; text-decoration: none; font-weight: 500; font-size: 0.95rem; display: block; transition: color 0.2s;">📚 Recursos</a>
+        </nav>
+
+        <div style="border-top: 1px solid #2A2A4E; padding-top: 20px;">
+            <a href="index.html" style="color: #94A3B8; text-decoration: none; font-size: 0.9rem; font-weight: 500; display: block;">🚪 Cerrar sesión</a>
+        </div>
+    </aside>
+
+    <div style="margin-left: 260px; flex: 1; display: flex; flex-direction: column; min-width: 0;">
+        
+        <header style="background-color: #FFFFFF; height: 70px; border-bottom: 1px solid #E2E8F0; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; position: sticky; top: 0; z-index: 90;">
+            <div>
+                <input type="text" placeholder="Buscar flujos, logs o aplicaciones..." style="padding: 10px 16px; border: 1px solid #E2E8F0; border-radius: 6px; width: 350px; font-size: 0.9rem; font-family: inherit;">
+            </div>
+            <div style="display: flex; align-items: center; gap: 24px;">
+                <span style="font-size: 1.2rem; cursor: pointer; color: #64748B; position: relative;">
+                    🔔<span style="position: absolute; top: -2px; right: -2px; background: #E94560; width: 8px; height: 8px; border-radius: 50%;"></span>
+                </span>
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <div style="text-align: right;">
+                        <div style="font-size: 0.9rem; font-weight: 600; color: #1A1A2E;">William Castillo</div>
+                        <div style="font-size: 0.75rem; color: #64748B; font-weight: 500;">Plan Pro Activo</div>
+                    </div>
+                    <div style="width: 40px; height: 40px; background-color: #1A1A2E; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.95rem;">
+                        WC
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main style="padding: 40px; max-width: 1300px; width: 100%; box-sizing: border-box; margin: 0 auto;">
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px;">
+                <div>
+                    <h1 style="margin: 0; color: #1A1A2E; font-size: 1.8rem; font-weight: 700;">Panel General</h1>
+                    <p style="margin: 4px 0 0 0; color: #64748B; font-size: 0.95rem;">Monitorea y gestiona el rendimiento de tus automatizaciones nativas con IA.</p>
+                </div>
+                <button onclick="alert('Abriendo Editor Visual Drag & Drop...')" style="background-color: #E94560; color: white; border: none; padding: 12px 20px; border-radius: 6px; font-weight: 600; font-size: 0.95rem; cursor: pointer; box-shadow: 0 4px 6px rgba(233,69,96,0.2);">
+                    + Nuevo flujo
+                </button>
+            </div>
+
+            <section style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-bottom: 32px;">
+                
+                <div style="background: white; padding: 24px; border-radius: 8px; border: 1px solid #E2E8F0; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+                    <div style="color: #64748B; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Flujos Activos</div>
+                    <div style="font-size: 2.2rem; font-weight: 700; color: #1A1A2E; margin: 12px 0 4px 0;">12</div>
+                    <div style="color: #10B981; font-size: 0.85rem; font-weight: 500;">● Funcionando normalmente</div>
+                </div>
+
+                <div style="background: white; padding: 24px; border-radius: 8px; border: 1px solid #E2E8F0; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+                    <div style="color: #64748B; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Tareas Completadas Hoy</div>
+                    <div style="font-size: 2.2rem; font-weight: 700; color: #1A1A2E; margin: 12px 0 4px 0;">48</div>
+                    <div style="color: #10B981; font-size: 0.85rem; font-weight: 500;">↑ +14% respecto a ayer</div>
+                </div>
+
+                <div style="background: white; padding: 24px; border-radius: 8px; border: 1px solid #E2E8F0; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+                    <div style="color: #64748B; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Tasa de Éxito de IA</div>
+                    <div style="font-size: 2.2rem; font-weight: 700; color: #1A1A2E; margin: 12px 0 4px 0;">99.4%</div>
+                    <div style="color: #10B981; font-size: 0.85rem; font-weight: 500;">0 errores críticos detectados</div>
+                </div>
+            </section>
+
+            <section style="background: white; padding: 28px; border-radius: 8px; border: 1px solid #E2E8F0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); margin-bottom: 32px;">
+                <h3 style="margin: 0 0 20px 0; color: #1A1A2E; font-size: 1.1rem; font-weight: 600;">Gráfico de Actividad Semanal (Ejecuciones por día)</h3>
+                <div style="display: flex; justify-content: space-between; align-items: flex-end; height: 180px; padding: 10px 20px; border-bottom: 2px solid #E2E8F0;">
+                    <div style="display: flex; flex-direction: column; align-items: center; width: 8%;">
+                        <div style="background-color: #1A1A2E; width: 100%; height: 80px; border-radius: 4px 4px 0 0;"></div>
+                        <span style="font-size: 0.8rem; color: #64748B; margin-top: 8px; font-weight: 500;">Lun</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; width: 8%;">
+                        <div style="background-color: #1A1A2E; width: 100%; height: 120px; border-radius: 4px 4px 0 0;"></div>
+                        <span style="font-size: 0.8rem; color: #64748B; margin-top: 8px; font-weight: 500;">Mar</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; width: 8%;">
+                        <div style="background-color: #1A1A2E; width: 100%; height: 105px; border-radius: 4px 4px 0 0;"></div>
+                        <span style="font-size: 0.8rem; color: #64748B; margin-top: 8px; font-weight: 500;">Mié</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; width: 8%;">
+                        <div style="background-color: #E94560; width: 100%; height: 160px; border-radius: 4px 4px 0 0;"></div>
+                        <span style="font-size: 0.8rem; color: #64748B; margin-top: 8px; font-weight: 500;">Jue</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; width: 8%;">
+                        <div style="background-color: #1A1A2E; width: 100%; height: 130px; border-radius: 4px 4px 0 0;"></div>
+                        <span style="font-size: 0.8rem; color: #64748B; margin-top: 8px; font-weight: 500;">Vie</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; width: 8%;">
+                        <div style="background-color: #64748B; width: 100%; height: 45px; border-radius: 4px 4px 0 0;"></div>
+                        <span style="font-size: 0.8rem; color: #64748B; margin-top: 8px; font-weight: 500;">Sáb</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; width: 8%;">
+                        <div style="background-color: #64748B; width: 100%; height: 30px; border-radius: 4px 4px 0 0;"></div>
+                        <span style="font-size: 0.8rem; color: #64748B; margin-top: 8px; font-weight: 500;">Dom</span>
+                    </div>
+                </div>
+            </section>
+
+            <section style="background: white; border-radius: 8px; border: 1px solid #E2E8F0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); overflow: hidden;">
+                <div style="padding: 24px; border-bottom: 1px solid #E2E8F0;">
+                    <h3 style="margin: 0; color: #1A1A2E; font-size: 1.1rem; font-weight: 600;">Log de Eventos Recientes</h3>
+                </div>
+                <table style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9rem;">
+                    <thead>
+                        <tr style="background-color: #F8FAFC; border-bottom: 1px solid #E2E8F0;">
+                            <th style="padding: 16px 24px; color: #64748B; font-weight: 600;">ID Flujo</th>
+                            <th style="padding: 16px 24px; color: #64748B; font-weight: 600;">Nombre del Proceso</th>
+                            <th style="padding: 16px 24px; color: #64748B; font-weight: 600;">Integraciones Utilizadas</th>
+                            <th style="padding: 16px 24px; color: #64748B; font-weight: 600;">Hora</th>
+                            <th style="padding: 16px 24px; color: #64748B; font-weight: 600;">Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody style="color: #334155;">
+                        <tr style="border-bottom: 1px solid #E2E8F0;">
+                            <td style="padding: 16px 24px; font-weight: 600; color: #1A1A2E;">#NX-9082</td>
+                            <td style="padding: 16px 24px;">Sincronización Clientes Nuevos</td>
+                            <td style="padding: 16px 24px;">Stripe ➔ Google Sheets</td>
+                            <td style="padding: 16px 24px;">Hace 2 min</td>
+                            <td style="padding: 16px 24px;"><span style="background: #DCFCE7; color: #15803D; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">Exitoso</span></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #E2E8F0;">
+                            <td style="padding: 16px 24px; font-weight: 600; color: #1A1A2E;">#NX-9081</td>
+                            <td style="padding: 16px 24px;">Notificación Alerta DevOps</td>
+                            <td style="padding: 16px 24px;">GitHub ➔ Slack (IA Node)</td>
+                            <td style="padding: 16px 24px;">Hace 12 min</td>
+                            <td style="padding: 16px 24px;"><span style="background: #DCFCE7; color: #15803D; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">Exitoso</span></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #E2E8F0;">
+                            <td style="padding: 16px 24px; font-weight: 600; color: #1A1A2E;">#NX-9080</td>
+                            <td style="padding: 16px 24px;">Mapeo Campaña Marketing</td>
+                            <td style="padding: 16px 24px;">Webhook ➔ HubSpot</td>
+                            <td style="padding: 16px 24px;">Hace 45 min</td>
+                            <td style="padding: 16px 24px;"><span style="background: #FEF3C7; color: #D97706; padding: 4px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: 600;">En espera</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
